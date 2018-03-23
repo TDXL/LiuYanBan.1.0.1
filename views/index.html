@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言板</title>
+	<style>
+		ul {
+			width: 400px;
+
+		}
+		li {
+			width: 100%;
+			border-bottom: 1px dashed #ccc;
+		}
+		 p {
+		 	width: 100%;
+		 	padding-left: 200px;
+		 }
+	</style>
+</head>
+<body>
+	<a href="/publish">新建留言</a>
+	<ul width="400px">
+		<%for(var i =0;i<posts.length;i++){%>
+			<li>
+			<%= posts[i].name %>说：<%= posts[i].content %>
+
+				<p><%= posts[i].time %></p>
+			</li>
+		<%}%>	
+	</ul>
+</body>
+</html>
